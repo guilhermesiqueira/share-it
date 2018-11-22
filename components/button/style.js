@@ -2,8 +2,8 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   button: {
-    height: 50,
-    width: 50,
+    height: 40,
+    width: 40,
     borderRadius: 25,
     position: 'absolute',
     margin: 20,
