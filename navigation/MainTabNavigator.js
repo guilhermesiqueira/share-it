@@ -7,54 +7,73 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
-const HomeStack = createStackNavigator({
+const DestaquesStack = createStackNavigator({
   Home: HomeScreen,
 });
 
-HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+DestaquesStack.navigationOptions = {
+  tabBarLabel: 'Destaques',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
       name={
         Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
+          ? `ios-star`
+          : 'md-star'
       }
     />
   ),
 };
 
-const LinksStack = createStackNavigator({
+const MensagensStack = createStackNavigator({
   Links: LinksScreen,
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+MensagensStack.navigationOptions = {
+  tabBarLabel: 'Mensagens',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+      name={Platform.OS === 'ios' ? 'ios-mail' : 'md-mail'}
     />
   ),
 };
 
-const SettingsStack = createStackNavigator({
+const NotificacoesStack = createStackNavigator({
   Settings: SettingsScreen,
 });
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+NotificacoesStack.navigationOptions = {
+  tabBarLabel: 'Notificações',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+      name={Platform.OS === 'ios' ? 'ios-time' : 'md-time'}
+    />
+  ),
+};
+
+const PesquisarStack = createStackNavigator({
+  Settings: SettingsScreen,
+});
+
+PesquisarStack.navigationOptions = {
+  tabBarLabel: 'Pesquisar',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? 'ios-search' : 'md-search'}
     />
   ),
 };
 
 export default createBottomTabNavigator({
-  HomeStack,
-  LinksStack,
-  SettingsStack,
+  DestaquesStack,
+  MensagensStack,
+  NotificacoesStack,
+  PesquisarStack,
+}, {
+  tabBarOptions: {
+    activeTintColor: '#F3903D',
+  }
 });

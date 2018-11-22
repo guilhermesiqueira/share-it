@@ -1,14 +1,20 @@
 import React from 'react';
-import { ExpoConfigView } from '@expo/samples';
+import { View, Text } from 'react-native';
+
+import Header from '../components/header/index';
 
 export default class SettingsScreen extends React.Component {
   static navigationOptions = {
-    title: 'app.json',
+    header: null,
   };
 
   render() {
-    /* Go ahead and delete ExpoConfigView and replace it with your
-     * content, we just wanted to give you a quick view of your config */
-    return <ExpoConfigView />;
+    return (
+      <Header>
+        <View>
+          <Text>SCREEN</Text>
+        </View>
+      </Header>
+    );
   }
 }
