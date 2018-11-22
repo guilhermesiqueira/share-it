@@ -13,7 +13,7 @@ const person3 = require('../assets/images/person3.jpg');
 const person4 = require('../assets/images/person4.jpg');
 const person5 = require('../assets/images/person5.jpg');
 
-export default class HomeScreen extends React.Component {
+export default class HighlightScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
@@ -27,25 +27,25 @@ export default class HomeScreen extends React.Component {
         tags: '#pessoas #bonitas',
         image: person1,
         votes: 1,
-      },{
+      }, {
         name: 'Lalis Grito',
         description: 'Lorem ipsum',
         tags: '#ribon #teste',
         image: person2,
         votes: 10,
-      },{
+      }, {
         name: 'Alexandre Dj',
         description: 'Lorem ipsum',
         tags: '#flipper #jam',
         image: person3,
         votes: -5,
-      },{
+      }, {
         name: 'Me da Algodao',
         description: 'Lorem ipsum',
         tags: '#maldito #doce',
         image: person4,
         votes: 3,
-      },{
+      }, {
         name: 'Siquera Junio',
         description: 'Lorem ipsum',
         tags: '#ihc #passei',
@@ -58,7 +58,6 @@ export default class HomeScreen extends React.Component {
   render() {
 
     const { navigation } = this.props;
-
     return (
       <Header>
         <ScrollView>
@@ -76,6 +75,6 @@ export default class HomeScreen extends React.Component {
   }
 }
 
-HomeScreen.propTypes = {
+HighlightScreen.propTypes = {
   navigation: PropTypes.object.isRequired,
 };

@@ -10,7 +10,7 @@ const person3 = require('../assets/images/person3.jpg');
 const person4 = require('../assets/images/person4.jpg');
 const person5 = require('../assets/images/person5.jpg');
 
-export default class SettingsScreen extends React.Component {
+export default class NotificationScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
