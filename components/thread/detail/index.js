@@ -17,6 +17,8 @@ class Thread extends React.Component {
       body: this.props.body,
       tags: this.props.tags,
       votes: this.props.votes,
+      flagAdd: false,
+      flagSub: false,
     }
   }
 
@@ -29,7 +31,11 @@ class Thread extends React.Component {
   }
 
   changeVotes = (vote) => {
-    this.setState({ votes: this.state.votes + vote });
+    if (vote === 1 && this.state.flagAdd === false) {
+      this.setState({ votes: this.state.votes + vote, flagAdd: true, flagSub: false });
+    } else if (vote === -1 && this.state.flagSub === false) {
+      this.setState({ votes: this.state.votes + vote, flagSub: true, flagAdd: false });
+    }
   }
 
   render() {
