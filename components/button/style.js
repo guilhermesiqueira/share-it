@@ -14,9 +14,33 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
 
-  icon: {
-    fontSize: 40,
-    fontWeight: '400',
-    color: '#fff',
+  image: {
+    width: 25,
+    height: 25,
+    tintColor: '#fff',
+  },
+
+  threadIcon: {
+    position: 'absolute',
+    right: 35,
+    bottom: 50,
+  },
+
+  chartIcon: {
+    position: 'absolute',
+    right: 60,
+    bottom: 10,
+  },
+
+  file: {
+    tintColor: '#F3903D',
+    width: 40,
+    height: 40,
+  },
+
+  chart: {
+    tintColor: '#F3903D',
+    width: 30,
+    height: 30,
   },
 });
