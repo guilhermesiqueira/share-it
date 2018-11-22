@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import Header from '../components/header/index';
+import FloatButton from '../components/button';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -14,6 +15,7 @@ export default class HomeScreen extends React.Component {
         <View>
           <Text>Share It</Text>
         </View>
+        <FloatButton />
       </Header>
     );
   }
