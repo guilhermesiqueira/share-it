@@ -3,12 +3,12 @@ import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import HighlightScreen from '../screens/HighlightScreen';
+import MessageScreen from '../screens/MessageScreen';
+import NotificationScreen from '../screens/NotificationScreen';
 
 const DestaquesStack = createStackNavigator({
-  Home: HomeScreen,
+  Home: HighlightScreen,
 });
 
 DestaquesStack.navigationOptions = {
@@ -26,7 +26,7 @@ DestaquesStack.navigationOptions = {
 };
 
 const MensagensStack = createStackNavigator({
-  Links: LinksScreen,
+  Links: MessageScreen,
 });
 
 MensagensStack.navigationOptions = {
@@ -40,7 +40,7 @@ MensagensStack.navigationOptions = {
 };
 
 const NotificacoesStack = createStackNavigator({
-  Settings: SettingsScreen,
+  Settings: NotificationScreen,
 });
 
 NotificacoesStack.navigationOptions = {
@@ -54,7 +54,7 @@ NotificacoesStack.navigationOptions = {
 };
 
 const PesquisarStack = createStackNavigator({
-  Settings: SettingsScreen,
+  Settings: NotificationScreen,
 });
 
 PesquisarStack.navigationOptions = {
