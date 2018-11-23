@@ -7,6 +7,7 @@ import FloatButton from '../components/button';
 
 import Thread from '../components/thread/detail';
 
+const myPhoto = require('../assets/images/person.jpg');
 const person1 = require('../assets/images/person1.jpg');
 const person2 = require('../assets/images/person2.jpg');
 const person3 = require('../assets/images/person3.jpg');
@@ -55,9 +56,28 @@ export default class HighlightScreen extends React.Component {
     }
   }
 
+  newThread = () => {
+
+    const postsPush = this.appendObjTo(this.state.posts, {
+      name: 'Mauricio Lindo',
+      description: 'Lancer 3.0',
+      tags: '#pessoa #hmmi',
+      image: myPhoto,
+      votes: 3,
+    });
+
+    this.setState({ posts: postsPush });
+  }
+
+  appendObjTo = (thatArray, newObj) => {
+    const frozenObj = Object.freeze(newObj);
+    return Object.freeze(thatArray.concat(frozenObj));
+  }
+
   render() {
 
     const { navigation } = this.props;
+
     return (
       <Header>
         <ScrollView>
@@ -69,7 +89,7 @@ export default class HighlightScreen extends React.Component {
             }
           </View>
         </ScrollView>
-        <FloatButton navigation={navigation} />
+        <FloatButton navigation={navigation} NewThread={() => this.newThread()} />
       </Header>
     );
   }

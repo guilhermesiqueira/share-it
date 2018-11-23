@@ -16,6 +16,7 @@ class NewThread extends React.Component {
   }
 
   render() {
+
     return (
       <View>
         <Text>Título: </Text>

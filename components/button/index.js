@@ -35,16 +35,20 @@ class FloatButton extends React.Component {
     }
   }
 
-  post = () => {
-    console.log('posta a parada');
-  }
-
   createThread = () => {
+    this.setState({ open: false });
     this.setState({ option: true });
     this.setState({ isModalVisible: true });
   }
 
+  onPost = () => {
+    this.props.NewThread();
+    this.setState({ open: false });
+    this.setState({ isModalVisible: false });
+  }
+
   createVoting = () => {
+    this.setState({ open: false });
     this.setState({ option: false });
     this.setState({ isModalVisible: true });
   }
@@ -56,7 +60,7 @@ class FloatButton extends React.Component {
         { this.state.open ? <TouchableOpacity onPress={this.createVoting} style={style.chartIcon}><Image source={chart} style={style.chart} /></TouchableOpacity> : null }
         <Image source={plus} style={[style.image, { transform: this.state.open ? [{ rotate: '45deg'}] :  [{ rotate: '0deg'}] }]} />
         <Modal isVisible={this.state.isModalVisible} style={{backgroundColor: 'white'}}>
-        { this.state.option ? <NewThread onCancel={this._hideModal} onPost={this.post} /> : <NewVoting onCancel={this._hideModal} onPost={this.post} /> }
+        { this.state.option ? <NewThread onCancel={this._hideModal} onPost={this.onPost} /> : <NewVoting onCancel={this._hideModal} onPost={() => { console.log('pedagio'); }} /> }
         </Modal>
       </TouchableOpacity>
     );
@@ -65,6 +69,7 @@ class FloatButton extends React.Component {
 
 FloatButton.propTypes = {
   navigation: PropTypes.object.isRequired,
+  NewThread: PropTypes.func.isRequired,
 };
 
 export default FloatButton;
