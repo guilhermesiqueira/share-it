@@ -51,7 +51,7 @@ export default class MessageScreen extends React.Component {
             <View style={{ alignItems: 'center', width: '100%', marginTop: 16 }}>
               {
                 this.state.messages.map((message, idx) => {
-                  return <RowMessage key={idx} name={message.name} message={message.message} image={message.image } />;
+                  return <RowMessage key={idx} navigation={this.props.navigation} name={message.name} message={message.message} image={message.image } />;
                 })
               }
             </View>

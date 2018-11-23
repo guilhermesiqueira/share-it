@@ -7,22 +7,22 @@ import style from './style';
 class RowMessage extends React.Component {
 
   render() {
-    const { navigation } = this.props;
 
     navigateChat = () => {
+
+      const { navigation } = this.props;
+
       navigation.navigate('Register');
-    } 
+    }
+
     return (
-      <TouchableOpacity onPress={() => navigateChat()}>
+      <TouchableOpacity onPress={() => navigateChat()} style={{ width: '100%' }}>
         <View style={style.content}>
-          <Image source={this.props.image} style={style.image}/>
-        <View>
+          <Image source={this.props.image} style={style.image} />
+          <View>
             <Text style={style.title}>{this.props.name}</Text>
-            <Text style={style.body}>{this.props.message.substring(0,30)}...</Text>
+            <Text style={style.body}>{this.props.message.substring(0, 30)}...</Text>
           </View>
-          <TouchableOpacity onPress={() => navigateChat()} style={{marginTop: 20, width: 160, height: 40, backgroundColor: '#F3903D', borderColor: 'gray', borderWidth: 1, borderRadius: 10, alignItems: 'center', justifyContent: 'center'}}>
-            <Text style={{ fontSize: 16 }}>TESTE</Text>
-          </TouchableOpacity>
         </View>
       </TouchableOpacity>
     );
@@ -33,6 +33,7 @@ RowMessage.propTypes = {
   name: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
   image: PropTypes.number.isRequired,
+  navigation: PropTypes.object.isRequired,
 };
 
 export default RowMessage;
