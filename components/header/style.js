@@ -22,4 +22,8 @@ export default StyleSheet.create({
     position: 'absolute',
     right: 16,
   },
+  touchable: {
+    position: 'absolute',
+    right: 16,
+  },
 });
