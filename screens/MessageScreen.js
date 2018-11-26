@@ -44,7 +44,7 @@ export default class MessageScreen extends React.Component {
 
   render() {
     return (
-      <Header>
+      <Header navigation={this.props.navigation}>
         <View style={{ alignItems: 'center', marginTop: 16 }}>
           <ScrollView style={{ width: '100%' }}>
             <Text style={{ fontSize: 18, fontWeight: 'bold', marginLeft: 16 }}>Mensagens</Text>

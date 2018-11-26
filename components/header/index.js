@@ -35,7 +35,7 @@ class Header extends React.Component {
             <Image source={person} style={style.image} />
           </TouchableOpacity>
         </View>
-        { this.state.open ? <Profile /> : children }
+        { this.state.open ? <Profile navigation={this.props.navigation} img={person} /> : children }
       </View>
     );
   }
@@ -43,6 +43,7 @@ class Header extends React.Component {
 
 Header.propTypes = {
   children: PropTypes.node,
+  navigation: PropTypes.object.isRequired,
 };
 
 Header.defaultProps = {

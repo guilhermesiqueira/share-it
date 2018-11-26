@@ -79,7 +79,7 @@ export default class HighlightScreen extends React.Component {
     const { navigation } = this.props;
 
     return (
-      <Header>
+      <Header navigation={navigation}>
         <ScrollView>
           <View style={{ alignItems: 'center', marginBottom: 20 }}>
             {
