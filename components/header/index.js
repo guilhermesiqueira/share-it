@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 
 import style from './style';
 
 import Profile from '../profile';
+
+import CustomText from '../helpers/text';
 
 const person = require('../../assets/images/person.jpg');
 
@@ -30,7 +32,7 @@ class Header extends React.Component {
     return (
       <View style={style.screen}>
         <View style={style.header}>
-          <Text style={style.title}>{'Share It'}</Text>
+          <CustomText style={style.title}>{'Share It'}</CustomText>
           <TouchableOpacity style={style.touchable} onPress={this.openProfile}>
             <Image source={person} style={style.image} />
           </TouchableOpacity>

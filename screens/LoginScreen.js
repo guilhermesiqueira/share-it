@@ -1,6 +1,8 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, TextInput } from 'react-native';
+import { View, TouchableOpacity, TextInput } from 'react-native';
 import PropTypes from 'prop-types';
+
+import CustomText from '../components/helpers/text';
 
 export default class LoginScreen extends React.Component {
   static navigationOptions = {
@@ -30,7 +32,7 @@ export default class LoginScreen extends React.Component {
     return (
       <View style={{ alignItems: 'center' }}>
         <View style={{ width: '100%', height: '45%', backgroundColor: '#F3903D', alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 45 }}>SHARE IT</Text>
+          <CustomText style={{ fontSize: 45, fontFamily: 'KGSorryNotSorry' }}>SHARE IT</CustomText>
         </View>
         <TextInput 
           style={{height: 40, borderColor: 'gray', borderWidth: 1, backgroundColor: 'white', width: '80%', marginTop: 25}}
@@ -45,13 +47,13 @@ export default class LoginScreen extends React.Component {
           placeholder={'Senha'}
         />
         <TouchableOpacity onPress={() => navigateHighlight()} style={{marginTop: 20, width: 160, height: 40, backgroundColor: '#F3903D', borderColor: 'gray', borderWidth: 1, borderRadius: 10, alignItems: 'center', justifyContent: 'center'}}>
-          <Text style={{ fontSize: 16 }}>ENTRAR</Text>
+          <CustomText style={{ fontSize: 16 }}>ENTRAR</CustomText>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigateRegister()} style={{marginTop: 20, width: 160, height: 40, backgroundColor: '#F3903D', borderColor: 'gray', borderWidth: 1, borderRadius: 10, alignItems: 'center', justifyContent: 'center'}}>
-          <Text style={{ fontSize: 16 }}>CADASTRE-SE</Text>
+          <CustomText style={{ fontSize: 16 }}>CADASTRE-SE</CustomText>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigateHighlight()} style={{marginTop: 20}}>
-          <Text style={{ fontSize: 12, color: 'blue' }}>Esqueci minha senha</Text>
+          <CustomText style={{ fontSize: 12, color: 'blue' }}>Esqueci minha senha</CustomText>
         </TouchableOpacity>
       </View>
     );

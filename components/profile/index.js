@@ -8,6 +8,8 @@ const person1 = require('../../assets/images/person1.jpg');
 const person2 = require('../../assets/images/person2.jpg');
 const person3 = require('../../assets/images/person3.jpg');
 
+import CustomText from '../helpers/text';
+
 class Profile extends React.Component {
 
   render() {
@@ -17,13 +19,13 @@ class Profile extends React.Component {
     return (
       <View style={style.content}>
         <TouchableOpacity style={style.logout} onPress={() => { navigation.navigate('Login'); }}>
-          <Text style={style.exit}>Sair</Text>
+          <CustomText style={style.exit}>Sair</CustomText>
         </TouchableOpacity>
         <Image source={img} style={style.image} />
-        <Text style={style.name}>Bruna</Text>
+        <CustomText style={style.name}>Bruna</CustomText>
         <View style={style.row}>
           <View style={style.col}>
-            <Text style={style.title}>Amigos</Text>
+            <CustomText style={style.title}>Amigos</CustomText>
             <View style={style.friends}>
               <Image source={person1} style={style.friend} />
               <Image source={person2} style={style.friend} />
@@ -31,12 +33,12 @@ class Profile extends React.Component {
             </View>
           </View>
           <View style={style.col}>
-            <Text style={style.title}>Threads</Text>
+            <CustomText style={style.title}>Threads</CustomText>
             <View style={style.thread}>
-              <Text>Lorem ipsum vehicula ligaem?</Text>
+              <CustomText>Lorem ipsum vehicula ligaem?</CustomText>
             </View>
             <View style={style.thread}>
-              <Text>Lorem ipsum tempus gogh van </Text>
+              <CustomText>Lorem ipsum tempus gogh van </CustomText>
             </View>
           </View>
         </View>

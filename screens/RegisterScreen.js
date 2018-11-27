@@ -1,6 +1,8 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, TextInput } from 'react-native';
+import { View, TouchableOpacity, TextInput } from 'react-native';
 import PropTypes from 'prop-types';
+
+import CustomText from '../components/helpers/text';
 
 export default class RegisterScreen extends React.Component {
   static navigationOptions = {
@@ -28,10 +30,10 @@ export default class RegisterScreen extends React.Component {
     return (
       <View style={{ alignItems: 'center', height: '100%', width: '100%' }}>
         <View style={{ width: '100%', height: '30%', backgroundColor: '#F3903D', alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 45 }}>SHARE IT</Text>
+          <CustomText style={{ fontSize: 45 }}>SHARE IT</CustomText>
         </View>
         <View style={{ marginTop: 15, width: '100%', alignItems: 'center' }}>
-          <Text style={{ fontSize: 30, fontWeight: 'bold' }}>Cadastre-se</Text>
+          <CustomText style={{ fontSize: 30, fontWeight: 'bold' }}>Cadastre-se</CustomText>
           <TextInput
             style={{ height: 40, borderColor: 'gray', borderWidth: 1, backgroundColor: 'white', width: '80%', marginTop: 15 }}
             onChangeText={(username) => this.setState({ username })}
@@ -58,10 +60,10 @@ export default class RegisterScreen extends React.Component {
           />
         </View>
         <TouchableOpacity onPress={() => goBack()} style={{marginTop: 20, width: 160, height: 40, backgroundColor: '#F3903D', borderColor: 'gray', borderWidth: 1, borderRadius: 10, alignItems: 'center', justifyContent: 'center'}}>
-          <Text style={{ fontSize: 16 }}>CADASTRE-SE</Text>
+          <CustomText style={{ fontSize: 16 }}>CADASTRE-SE</CustomText>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => goBack()} style={{marginTop: 15}}>
-          <Text style={{ fontSize: 12, color: 'blue' }}>Voltar</Text>
+          <CustomText style={{ fontSize: 12, color: 'blue' }}>Voltar</CustomText>
         </TouchableOpacity>
       </View>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Image, View, Text } from 'react-native';
+import { TouchableOpacity, Image, View } from 'react-native';
 import PropTypes from 'prop-types';
 import Modal from 'react-native-modal'
 

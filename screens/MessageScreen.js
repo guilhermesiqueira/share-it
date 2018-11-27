@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 
 import Header from '../components/header/index';
 import RowMessage from '../components/message/row';
+
+import CustomText from '../components/helpers/text';
 
 const person1 = require('../assets/images/person1.jpg');
 const person2 = require('../assets/images/person2.jpg');
@@ -47,7 +49,7 @@ export default class MessageScreen extends React.Component {
       <Header navigation={this.props.navigation}>
         <View style={{ alignItems: 'center', marginTop: 16 }}>
           <ScrollView style={{ width: '100%' }}>
-            <Text style={{ fontSize: 18, fontWeight: 'bold', marginLeft: 16 }}>Mensagens</Text>
+            <CustomText style={{ fontSize: 18, fontWeight: 'bold', marginLeft: 16 }}>Mensagens</CustomText>
             <View style={{ alignItems: 'center', width: '100%', marginTop: 16 }}>
               {
                 this.state.messages.map((message, idx) => {

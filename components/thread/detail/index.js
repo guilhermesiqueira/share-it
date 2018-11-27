@@ -8,6 +8,8 @@ const share = require('../../../assets/images/share.png');
 const like = require('../../../assets/images/like.png');
 const deslike = require('../../../assets/images/deslike.png');
 
+import CustomText from '../../helpers/text';
+
 class Thread extends React.Component {
 
   constructor(props) {

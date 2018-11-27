@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 
 import style from './style';
+
+import CustomText from '../../helpers/text';
 
 class RowMessage extends React.Component {
 
@@ -10,9 +12,9 @@ class RowMessage extends React.Component {
 
     navigateChat = () => {
 
-      const { navigation } = this.props;
+      // const { navigation } = this.props;
 
-      navigation.navigate('Register');
+      // navigation.navigate('Register');
     }
 
     return (
@@ -20,8 +22,8 @@ class RowMessage extends React.Component {
         <View style={style.content}>
           <Image source={this.props.image} style={style.image} />
           <View>
-            <Text style={style.title}>{this.props.name}</Text>
-            <Text style={style.body}>{this.props.message.substring(0, 30)}...</Text>
+            <CustomText style={style.title}>{this.props.name}</CustomText>
+            <CustomText style={style.body}>{this.props.message.substring(0, 30)}...</CustomText>
           </View>
         </View>
       </TouchableOpacity>
