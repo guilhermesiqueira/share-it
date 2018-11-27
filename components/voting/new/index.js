@@ -27,7 +27,7 @@ class NewVoting extends React.Component {
       <View style={{backgroundColor: 'rgba(0, 0, 0, 0.2)'}}>
         <Text style={{color: 'white'}}>  Título: </Text>
         <TextInput 
-          style={{height: 40,marginLeft: 10, marginRight: 10, marginBottom: 10, borderColor: 'gray', borderWidth: 1}}
+          style={{height: 40,marginLeft: 10, marginRight: 10, marginBottom: 10, borderColor: 'gray', borderWidth: 1, color: '#fff', padding: 5}}
           onChangeText={(title) => this.setState({title})}
           value={this.state.title}
         />
@@ -44,7 +44,7 @@ class NewVoting extends React.Component {
         />
         <Text style={{color: 'white'}}>  Tags: </Text>
         <TextInput 
-          style={{height: 40, marginLeft: 10, marginRight: 10, marginBottom: 10, borderColor: 'gray', borderWidth: 1}}
+          style={{height: 40, marginLeft: 10, marginRight: 10, marginBottom: 10, borderColor: 'gray', borderWidth: 1, color: '#fff', padding: 5}}
           onChangeText={(tags) => this.setState({tags})}
           value={this.state.tags}
         />

@@ -59,11 +59,11 @@ export default class HighlightScreen extends React.Component {
   newThread = () => {
 
     const postsPush = this.appendObjTo(this.state.posts, {
-      name: 'Mauricio Lindo',
-      description: 'Lancer 3.0',
-      tags: '#pessoa #hmmi',
+      name: 'Share It',
+      description: 'Share It',
+      tags: '#ihc #ms',
       image: myPhoto,
-      votes: 3,
+      votes: 0,
     });
 
     this.setState({ posts: postsPush });
