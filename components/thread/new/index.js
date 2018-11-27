@@ -18,29 +18,29 @@ class NewThread extends React.Component {
   render() {
 
     return (
-      <View>
-        <Text>Título: </Text>
+      <View style={{backgroundColor: 'rgba(0, 0, 0, 0.2)'}}>
+        <Text style={{color: 'white'}}>  Título: </Text> 
         <TextInput 
-          style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+          style={{height: 40, marginLeft: 10, marginRight: 10, marginBottom: 10, borderColor: 'gray', borderWidth: 1}}
           onChangeText={(title) => this.setState({title})}
           value={this.state.title}
         />
-        <Text>Descrição: </Text>
+        <Text style={{color: 'white'}}>  Descrição: </Text>
         <TextInput 
-          style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+          style={{height: 40, marginLeft: 10, marginRight: 10, marginBottom: 10, borderColor: 'gray', borderWidth: 1}}
           onChangeText={(description) => this.setState({description})}
           value={this.state.description}
         />
-        <Text>Tags: </Text>
+        <Text style={{color: 'white'}}>  Tags: </Text>
         <TextInput 
-          style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+          style={{height: 40, marginLeft: 10, marginRight: 10, marginBottom: 10, borderColor: 'gray', borderWidth: 1}}
           onChangeText={(tags) => this.setState({tags})}
           value={this.state.tags}
         />
-        <TouchableOpacity onPress={this.props.onCancel}>
+        <TouchableOpacity onPress={this.props.onCancel} style={{marginTop:10, marginLeft: 20, left:30, width: 80, height: 40, backgroundColor: '#F3903D', borderColor: 'gray', borderWidth: 1, borderRadius: 10, alignItems: 'center', justifyContent: 'center'}}>
           <Text>Cancelar</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={this.props.onPost}>
+        <TouchableOpacity onPress={this.props.onPost} style={{marginLeft: 20, bottom:40, left:130, width: 80, height: 40, backgroundColor: '#F3903D', borderColor: 'gray', borderWidth: 1, borderRadius: 10, alignItems: 'center', justifyContent: 'center'}}>
           <Text>Postar</Text>
         </TouchableOpacity>
       </View>

@@ -59,7 +59,7 @@ class FloatButton extends React.Component {
         { this.state.open ? <TouchableOpacity onPress={this.createThread} style={style.threadIcon}><Image source={file} style={style.file} /></TouchableOpacity> : null }
         { this.state.open ? <TouchableOpacity onPress={this.createVoting} style={style.chartIcon}><Image source={chart} style={style.chart} /></TouchableOpacity> : null }
         <Image source={plus} style={[style.image, { transform: this.state.open ? [{ rotate: '45deg'}] :  [{ rotate: '0deg'}] }]} />
-        <Modal isVisible={this.state.isModalVisible} style={{backgroundColor: 'white'}}>
+        <Modal isVisible={this.state.isModalVisible} style={{backgroundColor: 'transparent'}}>
         { this.state.option ? <NewThread onCancel={this._hideModal} onPost={this.onPost} /> : <NewVoting onCancel={this._hideModal} onPost={() => { console.log('pedagio'); }} /> }
         </Modal>
       </TouchableOpacity>
